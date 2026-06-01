@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Chatbot - LM Studio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="chat-header">
+            <h1>🤖 AI Chatbot</h1>
+            <p>Powered by Qwen3.5 via LM Studio</p>
+        </div>
+
+        <div class="chat-messages" id="chatMessages">
+            <div class="message bot-message">
+                <div class="message-content">
+                    Hallo! 👋 Ik ben een AI chatbot. Stel me een vraag en ik zal mijn best doen je te helpen!
+                </div>
+            </div>
+        </div>
+
+        <div class="chat-input-container">
+            <form id="chatForm" class="chat-input-form">
+                <input
+                    type="text"
+                    id="messageInput"
+                    class="message-input"
+                    placeholder="Typ je bericht hier..."
+                    autocomplete="off"
+                    required
+                >
+                <button type="submit" class="send-button" id="sendButton">
+                    <span>Verzenden</span>
+                    <span class="send-icon">➤</span>
+                </button>
+            </form>
+            <div class="loading" id="loadingIndicator" style="display: none;">
+                <div class="spinner"></div>
+                <span>AI denkt na...</span>
+            </div>
+        </div>
+
+        <div class="error-message" id="errorMessage" style="display: none;"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
